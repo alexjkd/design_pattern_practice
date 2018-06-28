@@ -34,8 +34,3 @@ class dataBaseConnection
         trigger_error("Clone is not allowed!");
     }
 }
-
-printf("this is the first connection<br/>");
-$mysqlConnection = dataBaseConnection::getInstance();
-printf("this is the second connection<br/>");
-$mysqlConnection2 = $mysqlConnection;

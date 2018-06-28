@@ -1,2 +1,2 @@
-# design_pattern_practice
+# Design Pattern Practice (Melon)
 This a project for studying PHP object origin programing
