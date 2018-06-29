@@ -11,26 +11,37 @@ namespace dataBaseConnection;
 
 class dataBaseConnection
 {
-    private static $conn;
+    private static $sql_conn;
+    private static $instance;
+    private static $counter;
 
-    private function __construct()
+    /**
+     * @param mixed $counter
+     */
+    public function setCounter($counter): void
     {
-        $this->conn= mysqli_connect('localhost','root','');
-        printf("data base connection has been created<br/>");
+        self::$counter = $counter;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCounter()
+    {
+        return self::$counter;
+    }
+
+    private function __construct(){}
 
     //return obj is a mysql object
-    public static function getInstance()
+    public static function getInstance():dataBaseConnection
     {
-        if(!(self::$conn instanceof self))
+        if(self::$instance == null)
         {
-            self::$conn = new self;
+            self::$instance = new self();
+            self::$sql_conn= mysqli_connect('localhost','root','root');
+            printf("Connected to the mysql localhost.\n");
         }
-    }
-
-    public function __clone()
-    {
-        // TODO: Implement __clone() method.
-        trigger_error("Clone is not allowed!");
+        return self::$instance;
     }
 }
