@@ -9,7 +9,7 @@
 namespace SingletonTemplate;
 
 
-class SingletonTemplate
+class Singleton
 {
     private static $instances = array();
     protected function __construct() {}

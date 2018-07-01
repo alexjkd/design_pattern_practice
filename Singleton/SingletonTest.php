@@ -7,13 +7,13 @@
  */
 
 namespace SingletonTemplate;
-require_once 'SingletonTemplate.php';
+require_once 'Singleton.php';
 
 
-class Foo extends SingletonTemplate {};
-class Bar extends SingletonTemplate {};
+class Foo extends Singleton {};
+class Bar extends Singleton {};
 
-class SingletonTemplateTest extends \PHPUnit\Framework\TestCase
+class SingletonTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testGetInstance()
