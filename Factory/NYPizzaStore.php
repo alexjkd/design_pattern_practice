@@ -37,7 +37,6 @@ class NYPizzaStore extends PizzaStore
     protected function createPizza($type)
     {
         $ingredientFactory = new NYIngredientFactory();
-        // TODO: Implement createPizza() method.
         if($type === 'Clam')
         {
             return new ClamPizza($ingredientFactory);

@@ -24,7 +24,6 @@ class Observer implements IObserver
 
     public function update($data): void
     {
-        // TODO: Implement update() method.
         $this->data = $data;
 
     }

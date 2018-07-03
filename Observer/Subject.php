@@ -24,7 +24,6 @@ class Subject implements ISubject
 
     public function registerObserver($observer): bool
     {
-        // TODO: Implement registerObserver() method
         if(!($observer instanceof Observer))
         {
             printf("The object is not observer!\n");
@@ -49,11 +48,9 @@ class Subject implements ISubject
                 break;
             }
         }
-        // TODO: Implement removeObserver() method.
     }
     public function notifyObserver($data): void
     {
-        // TODO: Implement notifyObserver() method.
         foreach($this->observerList as $key=>$val)
         {
             if($val instanceof IObserver)

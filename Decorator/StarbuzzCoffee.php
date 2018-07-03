@@ -17,7 +17,6 @@ class HouseBlend extends Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return 0.3;
     }
 }
@@ -31,7 +30,6 @@ class DarkRost extends Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return 0.4;
     }
 }
@@ -45,7 +43,6 @@ class Espresso extends  Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return 1.5;
     }
 }
@@ -59,7 +56,6 @@ class Decaf extends Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return 0.6;
     }
 }
@@ -76,13 +72,11 @@ class Milk extends Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return $this->bever->cost() + 0.2;
     }
 
     public function getDescription(): string
     {
-        // TODO: Implement getDescription() method.
         return $this->bever->getDescription() . ', Milk';
     }
 }
@@ -99,13 +93,11 @@ class Soy extends Beverage
 
     public function cost(): float
     {
-        // TODO: Implement cost() method.
         return $this->bever->cost() + 0.3;
     }
 
     public function getDescription(): string
     {
-        // TODO: Implement getDescription() method.
         return $this->bever->getDescription() . ', Soy';
     }
 }
