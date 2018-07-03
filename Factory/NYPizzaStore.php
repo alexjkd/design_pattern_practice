@@ -34,9 +34,16 @@ class NYIngredientFactory implements IIngredientFactory
 
 class NYPizzaStore extends PizzaStore
 {
+<<<<<<< HEAD
     protected function createPizza($type)
     {
         $ingredientFactory = new NYIngredientFactory();
+=======
+    public function createPizza($type)
+    {
+        $ingredientFactory = new NYIngredientFactory();
+        // TODO: Implement createPizza() method.
+>>>>>>> origin
         if($type === 'Clam')
         {
             return new ClamPizza($ingredientFactory);
